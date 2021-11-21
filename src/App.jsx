@@ -5,7 +5,7 @@ import faker from "faker";
 
 console.log(faker);
 function App() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Muhammad Rizwan");
 
   const buttonMarkup = (
     <div className="d-flex justify-content-center mb-2">
@@ -17,6 +17,8 @@ function App() {
   const changeHandler = (name) => {
     setName(name);
   };
+
+  const changeInputHandler = (event) => setName(event.target.value)
 
   return (
     <div className="App">
@@ -34,6 +36,7 @@ function App() {
             job={faker.name.jobTitle()}
             alt={faker.name.firstName()}
             onChangeName={() => changeHandler("Rudi habibi")}
+            onChangeInput={changeInputHandler}
           >
             {buttonMarkup}
           </Card>

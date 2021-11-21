@@ -10,6 +10,7 @@ const Card = (props) => {
           <b>{props.name}</b>
         </h4>
         <p>{props.job}</p>
+        <input onChange={props.onChangeInput} type="text" value={props.name} className="mt-2" />
         <button className="my-2 btn btn-success" onClick={props.onChangeName}>Change Name</button>
         <div>{props.children}</div>
       </div>
